@@ -15,7 +15,7 @@
        
      ![relational-dbs](../../images/relational-dbs.PNG)
      
-   - A Key-Value Store stores information in a Key and Value format.
+   - A Key-Value Store stores information in a Key and Value format. No duplicate keys allowed
        
      ![key-value](../../images/key-value.PNG)
        
@@ -24,6 +24,11 @@
      - Download the relevant binary for your operating system from github releases page (https://github.com/etcd-io/etcd/releases)
        ```
        For Example: To download ETCD V3.3.11, run the below curl command
+       
+       For MAC
+        curl -L https://storage.googleapis.com/etcd/v3.3.11/etcd-v3.3.11-darwin-amd64.zip -o /tmp/etcd-v3.3.11-darwin-amd64.zip
+        unzip /tmp/etcd-v3.3.11-darwin-amd64.zip -d /tmp && rm -f /tmp/etcd-v3.3.11-darwin-amd64.zip
+        mv /tmp/etcd-v3.3.11-darwin-amd64/* /tmp/etcd-download-test && rm -rf mv /tmp/etcd-v3.3.11-darwin-amd64
          
        $ https://github.com/etcd-io/etcd/releases/download/v3.3.11/etcd-v3.3.11-linux-amd64.tar.gz
        ```
