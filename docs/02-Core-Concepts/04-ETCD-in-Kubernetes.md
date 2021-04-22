@@ -6,6 +6,10 @@ In this section, we will take a look at ETCD role in kubernetes
 ## ETCD Datastore
 - The ETCD Datastore stores information regarding the cluster such as **`Nodes`**, **`PODS`**, **`Configs`**, **`Secrets`**, **`Accounts`**, **`Roles`**, **`Bindings`** and **`Others`**.
 - Every information you see when you run the **`kubectl get`** command is from the **`ETCD Server`**.
+- Every change you do is updated in the stcd server and only once it is updated in the etcd server it is considered to be complete.
+
+## IP where etcd listens
+--advertise-client-urls https://${INTERNAL_IP}:2379 \\
 
 ## Setup - Manual
 - If you setup your cluster from scratch then you deploy **`ETCD`** by downloading ETCD Binaries yourself
